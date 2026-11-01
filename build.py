@@ -10,7 +10,7 @@ def page(fname, tab_ar, tab_en, body):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{tab_en} | {APP_EN}</title>
+<title>{tab_en} | {Hey Hello World!}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -22,7 +22,7 @@ def page(fname, tab_ar, tab_en, body):
 <div class="lang"><button data-set="ar">العربية</button> <button data-set="en">English</button></div>
 </header>
 {body}
-<footer><span data-l="ar">© {APP} — جميع الحقوق محفوظة.</span><span data-l="en">© {APP_EN} — All rights reserved.</span></footer>
+<footer><span data-l="ar">© {Hey Hello World!} — جميع الحقوق محفوظة.</span><span data-l="en">© {Hey Hello World!} — All rights reserved.</span></footer>
 </div></body></html>'''
 
 def sec(ar_t,ar_b,en_t,en_b):
