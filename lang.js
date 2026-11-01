@@ -1,16 +1,19 @@
 (function(){
+  var SUP=['ar','en','ru','ur','es','de','fr','tr','zh','hi'],RTL=['ar','ur'];
   var saved=null;try{saved=localStorage.getItem('lang')}catch(e){}
-  var l=saved||((navigator.language||'en').toLowerCase().indexOf('ar')===0?'ar':'en');
+  var nav=(navigator.language||'en').toLowerCase().slice(0,2);
+  var l=SUP.indexOf(saved)>-1?saved:(SUP.indexOf(nav)>-1?nav:'en');
   function set(x){
     document.documentElement.setAttribute('data-lang',x);
     document.documentElement.lang=x;
-    document.documentElement.dir=x==='ar'?'rtl':'ltr';
+    document.documentElement.dir=RTL.indexOf(x)>-1?'rtl':'ltr';
     try{localStorage.setItem('lang',x)}catch(e){}
-    document.querySelectorAll('.lang button').forEach(function(b){b.classList.toggle('on',b.dataset.set===x)});
+    var s=document.getElementById('langSel');if(s)s.value=x;
   }
+  set(l);
   document.addEventListener('DOMContentLoaded',function(){
-    document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){set(b.dataset.set)})});
+    var s=document.getElementById('langSel');
+    if(s)s.addEventListener('change',function(){set(s.value)});
     set(l);
   });
-  set(l);
 })();
