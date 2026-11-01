@@ -1,6 +1,6 @@
 # يولّد الصفحات الثلاث. عدّل المتغيرات أدناه ثم شغّل: python build.py
-APP="[اسم التطبيق]"; APP_EN="[APP NAME]"
-MAIL="[support@example.com]"
+APP="[Hey Hello Word!]"; APP_EN="[Hey Hello Word!]"
+MAIL="[hey.hello.world.2027@gmail.com]"
 DATE_AR="1 نوفمبر 2026"; DATE_EN="November 1, 2026"
 
 def page(fname, tab_ar, tab_en, body):
